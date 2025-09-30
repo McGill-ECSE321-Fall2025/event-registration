@@ -2,9 +2,7 @@ package ca.mcgill.ecse321.eventregistration.model;/*PLEASE DO NOT EDIT THIS CODE
 /*This code was generated using the UMPLE 1.35.0.7523.c616a4dce modeling language!*/
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -19,6 +17,7 @@ import java.sql.Time;
 // line 2 "model.ump"
 // line 51 "model.ump"
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Event {
 
     //------------------------

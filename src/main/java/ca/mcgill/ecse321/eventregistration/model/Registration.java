@@ -3,15 +3,15 @@ package ca.mcgill.ecse321.eventregistration.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Registration {
     @EmbeddedId
     private Key key;
+
+    @OneToOne
+    private Category category;
 
     // Hibernate needs a no-args constructor, but it can be protected
     protected Registration() {
