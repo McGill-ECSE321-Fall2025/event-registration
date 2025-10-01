@@ -23,8 +23,8 @@ public class OnlineEvent extends Event {
     // CONSTRUCTOR
     //------------------------
 
-    public OnlineEvent(int aId, String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aUrl) {
-        super(aId, aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
+    public OnlineEvent(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aUrl) {
+        super(aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
         url = aUrl;
     }
 

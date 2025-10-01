@@ -30,8 +30,7 @@ public class Person {
     // CONSTRUCTOR
     //------------------------
 
-    public Person(int aId, String aName, String aEmail, String aPassword, Date aCreationDate) {
-        id = aId;
+    public Person(String aName, String aEmail, String aPassword, Date aCreationDate) {
         name = aName;
         email = aEmail;
         password = aPassword;
@@ -45,13 +44,6 @@ public class Person {
     //------------------------
     // INTERFACE
     //------------------------
-
-    public boolean setId(int aId) {
-        boolean wasSet = false;
-        id = aId;
-        wasSet = true;
-        return wasSet;
-    }
 
     public boolean setName(String aName) {
         boolean wasSet = false;

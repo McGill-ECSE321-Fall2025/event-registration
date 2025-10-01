@@ -38,8 +38,7 @@ public class Event {
     // CONSTRUCTOR
     //------------------------
 
-    public Event(int aId, String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit) {
-        id = aId;
+    public Event(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit) {
         name = aName;
         date = aDate;
         startTime = aStartTime;
@@ -54,13 +53,6 @@ public class Event {
     //------------------------
     // INTERFACE
     //------------------------
-
-    public boolean setId(int aId) {
-        boolean wasSet = false;
-        id = aId;
-        wasSet = true;
-        return wasSet;
-    }
 
     public boolean setName(String aName) {
         boolean wasSet = false;

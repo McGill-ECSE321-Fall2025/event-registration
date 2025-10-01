@@ -23,8 +23,8 @@ public class InPersonEvent extends Event {
     // CONSTRUCTOR
     //------------------------
 
-    public InPersonEvent(int aId, String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aAddress) {
-        super(aId, aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
+    public InPersonEvent(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aAddress) {
+        super(aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
         address = aAddress;
     }
 
