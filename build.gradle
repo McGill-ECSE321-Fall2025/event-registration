@@ -8,12 +8,14 @@ group = 'ca.mcgill.ecse321'
 version = '0.0.1-SNAPSHOT'
 description = 'Event registration backend'
 
+// Set Java compatibility to Java 21
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
+// Ensure consistent encoding across all platforms and tools (especially Windows)
 repositories {
 	mavenCentral()
 }
@@ -28,4 +30,15 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+	doLast {
+		println 'Build and tests successful!'
+	}
+//	dependsOn('draft')
 }
+
+//tasks.register('draft') {
+//	println 'This is a draft task.'
+//}
