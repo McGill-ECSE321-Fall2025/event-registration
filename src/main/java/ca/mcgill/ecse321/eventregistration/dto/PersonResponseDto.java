@@ -3,13 +3,13 @@ package ca.mcgill.ecse321.eventregistration.dto;
 
 import ca.mcgill.ecse321.eventregistration.model.Person;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class PersonResponseDto {
     private int id;
     private String name;
     private String email;
-    private Date creationDate;
+    private LocalDate creationDate;
 
     // Needed by Jackson to deserialize JSON
     @SuppressWarnings("unused")
@@ -35,7 +35,7 @@ public class PersonResponseDto {
         return email;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 }

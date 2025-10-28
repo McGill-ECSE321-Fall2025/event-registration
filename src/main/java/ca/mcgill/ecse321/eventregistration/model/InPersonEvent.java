@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 // line 13 "model.ump"
 // line 56 "model.ump"
@@ -23,7 +24,7 @@ public class InPersonEvent extends Event {
     // CONSTRUCTOR
     //------------------------
 
-    public InPersonEvent(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aAddress) {
+    public InPersonEvent(String aName, LocalDate aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aAddress) {
         super(aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
         address = aAddress;
     }

@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest
 public class RegistrationRepositoryTests {
 
-    private final Date TODAY = Date.valueOf("2025-10-01");
+    private final LocalDate TODAY = LocalDate.of(2024, 12, 15);
 
     private final Person MIKE = new Person(
             "Mike",

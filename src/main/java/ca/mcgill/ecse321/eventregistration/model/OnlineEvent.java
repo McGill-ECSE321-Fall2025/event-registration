@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 // line 21 "model.ump"
 // line 73 "model.ump"
@@ -23,7 +24,7 @@ public class OnlineEvent extends Event {
     // CONSTRUCTOR
     //------------------------
 
-    public OnlineEvent(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aUrl) {
+    public OnlineEvent(String aName, LocalDate aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit, String aUrl) {
         super(aName, aDate, aStartTime, aEndTime, aRegistrationLimit);
         url = aUrl;
     }
