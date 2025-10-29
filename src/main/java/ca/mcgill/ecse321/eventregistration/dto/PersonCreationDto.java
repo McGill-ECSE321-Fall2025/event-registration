@@ -5,14 +5,14 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class PersonCreationDto {
-    @NotBlank(message = "Name cannot be empty or null")
+    @NotBlank(message = "Name cannot be empty or null.")
     private String name;
 
     @Email
-    @NotBlank(message = "Email cannot be empty or null")
+    @NotBlank(message = "Email cannot be empty or null.")
     private String email;
 
-    @Size(min = 8, message = "Password must be at least 8 characters long")
+    @Size(min = 8, message = "Password must be at least 8 characters long.")
     @NotBlank(message = "Password cannot be empty or null")
     private String password;
 

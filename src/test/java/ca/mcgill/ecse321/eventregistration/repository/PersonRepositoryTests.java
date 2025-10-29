@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -26,7 +27,7 @@ public class PersonRepositoryTests {
     @Test
     public void testCreateAndReadPerson() {
         // Arrange
-        Date today = Date.valueOf("2025-10-01");
+        LocalDate today = LocalDate.of(2024, 12, 15);
         Person mike = new Person(
                 "Mike",
                 "mike@mail.mcgill.ca",

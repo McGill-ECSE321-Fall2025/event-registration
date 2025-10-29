@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -27,7 +28,7 @@ public class OnlineEventRepositoryTests {
     @Test
     public void testCreateAndReadOnlineEventAsEvent() {
         String name = "Zoom Meeting";
-        Date date = Date.valueOf("2025-10-04");
+        LocalDate date = LocalDate.of(2024, 12, 15);
         Time startTime = Time.valueOf("17:25:00");
         Time endTime = Time.valueOf("23:59:59");
         int limit = 4;

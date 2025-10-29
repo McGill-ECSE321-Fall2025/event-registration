@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 // line 27 "model.ump"
 // line 61 "model.ump"
@@ -24,13 +24,13 @@ public class Person {
     private String name;
     private String email;
     private String password;
-    private Date creationDate;
+    private LocalDate creationDate;
 
     //------------------------
     // CONSTRUCTOR
     //------------------------
 
-    public Person(String aName, String aEmail, String aPassword, Date aCreationDate) {
+    public Person(String aName, String aEmail, String aPassword, LocalDate aCreationDate) {
         name = aName;
         email = aEmail;
         password = aPassword;
@@ -66,7 +66,7 @@ public class Person {
         return wasSet;
     }
 
-    public boolean setCreationDate(Date aCreationDate) {
+    public boolean setCreationDate(LocalDate aCreationDate) {
         boolean wasSet = false;
         creationDate = aCreationDate;
         wasSet = true;
@@ -89,7 +89,7 @@ public class Person {
         return password;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 

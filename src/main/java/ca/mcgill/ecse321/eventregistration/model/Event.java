@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 /**
  * @@@skipcppcompile - Contains Java code
@@ -29,7 +30,7 @@ public class Event {
     @GeneratedValue
     private int id;
     private String name;
-    private Date date;
+    private LocalDate date;
     private Time startTime;
     private Time endTime;
     private int registrationLimit;
@@ -38,7 +39,7 @@ public class Event {
     // CONSTRUCTOR
     //------------------------
 
-    public Event(String aName, Date aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit) {
+    public Event(String aName, LocalDate aDate, Time aStartTime, Time aEndTime, int aRegistrationLimit) {
         name = aName;
         date = aDate;
         startTime = aStartTime;
@@ -61,7 +62,7 @@ public class Event {
         return wasSet;
     }
 
-    public boolean setDate(Date aDate) {
+    public boolean setDate(LocalDate aDate) {
         boolean wasSet = false;
         date = aDate;
         wasSet = true;
@@ -97,7 +98,7 @@ public class Event {
         return name;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

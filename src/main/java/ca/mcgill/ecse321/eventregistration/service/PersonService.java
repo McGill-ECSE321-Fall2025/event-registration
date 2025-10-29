@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Service
@@ -23,7 +22,7 @@ public class PersonService {
 
     @Transactional
     public Person createPerson(@Valid PersonCreationDto personCreationDto) {
-        Date today = Date.valueOf(LocalDate.now());
+        LocalDate today = LocalDate.now();
         Person newPerson = new Person(
                 personCreationDto.getName(),
                 personCreationDto.getEmail(),
